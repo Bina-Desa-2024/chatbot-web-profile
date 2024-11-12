@@ -1,0 +1,30 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"syarat_ktp\"}}]": "utter_syarat_ktp",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"syarat_ktp\"}}, {\"prev_action\": {\"action_name\": \"utter_syarat_ktp\"}, \"user\": {\"intent\": \"syarat_ktp\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"jam_layanan\"}}]": "utter_jam_layanan",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"jam_layanan\"}}, {\"prev_action\": {\"action_name\": \"utter_jam_layanan\"}, \"user\": {\"intent\": \"jam_layanan\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fallback\"}}]": "utter_fallback",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fallback\"}}, {\"prev_action\": {\"action_name\": \"utter_fallback\"}, \"user\": {\"intent\": \"fallback\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bantuan_bot\"}}]": "utter_bantuan_bot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bantuan_bot\"}}, {\"prev_action\": {\"action_name\": \"utter_bantuan_bot\"}, \"user\": {\"intent\": \"bantuan_bot\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"syarat_kk\"}}]": "utter_syarat_kk",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"syarat_kk\"}}, {\"prev_action\": {\"action_name\": \"utter_syarat_kk\"}, \"user\": {\"intent\": \"syarat_kk\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"lokasi_kantor\"}}]": "utter_lokasi_kantor",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"lokasi_kantor\"}}, {\"prev_action\": {\"action_name\": \"utter_lokasi_kantor\"}, \"user\": {\"intent\": \"lokasi_kantor\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pamit\"}}]": "utter_pamit",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pamit\"}}, {\"prev_action\": {\"action_name\": \"utter_pamit\"}, \"user\": {\"intent\": \"pamit\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"syarat_skck\"}}]": "utter_syarat_skck",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"syarat_skck\"}}, {\"prev_action\": {\"action_name\": \"utter_syarat_skck\"}, \"user\": {\"intent\": \"syarat_skck\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "predicting default action with intent back",
+      "predicting default action with intent session_start"
+    ]
+  }
+}

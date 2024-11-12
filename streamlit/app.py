@@ -30,10 +30,10 @@ def get_bot_response(user_input):
                 st.session_state.messages.append({"role": "AI", "video": values})
 
 def CreateApp():
-    st.title("Welcome to Simple Rasa ChatBot With Streamlit")
+    st.markdown("<h1 style='text-align: center; margin-bottom: 1em;'>Chatbot Pemangkat</h1>", unsafe_allow_html=True)
 
     if "messages" not in st.session_state:
-        st.session_state["messages"] = [{"role": "AI", "message": "How can I help you?"}]
+        st.session_state["messages"] = [{"role": "AI", "message": "Apa yang bisa saya bantu?"}]
 
     for msg in st.session_state.messages:
         role = msg["role"]

@@ -1,46 +1,65 @@
 version: "3.1"
 
 nlu:
-- intent: greet
+- intent: salam
   examples: |
-    - hey
-    - hello
-    - hi
+    - hai
+    - halo
+    - assalamualaikum
     - selamat pagi
+    - selamat siang
     - selamat sore
     - selamat malam
-    - assalamualaikum
 
-- intent: goodbye
+- intent: pamit
   examples: |
     - terima kasih
     - sampai jumpa
+    - sampai nanti
     - selamat tinggal
     - bye
-    - sampai nanti
 
-- intent: ask_kk_requirements
+- intent: syarat_kk
   examples: |
-    - Apa saja syarat untuk membuat Kartu Keluarga?
-    - Bagaimana cara membuat KK baru?
-    - Syarat pembuatan Kartu Keluarga apa saja?
-    - Apa saja dokumen untuk KK?
+    - Apa saja syarat untuk membuat Kartu Keluarga di Pemangkat?
+    - Bagaimana cara mengurus KK baru di Kecamatan Pemangkat?
+    - Dokumen apa saja yang dibutuhkan untuk KK?
+    - Syarat membuat KK di Kecamatan Pemangkat?
 
-- intent: ask_ktp_requirements
+- intent: syarat_ktp
   examples: |
-    - Bagaimana cara mengurus KTP?
-    - Apa saja syarat untuk membuat KTP?
-    - Syarat pembuatan KTP apa saja?
-    - KTP baru apa saja syaratnya?
+    - Bagaimana cara membuat KTP di Pemangkat?
+    - Apa saja syarat untuk mengurus KTP baru?
+    - Dokumen apa saja yang diperlukan untuk KTP?
+    - Syarat KTP di Pemangkat?
 
-- intent: ask_skck_requirements
+- intent: syarat_skck
   examples: |
-    - Bagaimana cara mengurus SKCK?
-    - Apa saja syarat untuk membuat SKCK?
-    - SKCK baru apa saja syaratnya?
-    - Syarat pembuatan SKCK apa saja?
+    - Bagaimana cara membuat SKCK di Kecamatan Pemangkat?
+    - Apa saja syarat pembuatan SKCK di Pemangkat?
+    - Dokumen SKCK di Kecamatan Pemangkat apa saja?
+    - Cara mengurus SKCK di Polsek Pemangkat?
 
-- intent: bot_challenge
+- intent: jam_layanan
   examples: |
-    - Apakah kamu bot?
-    - Kamu manusia atau mesin?
+    - Jam berapa kantor kecamatan buka?
+    - Kapan pelayanan administrasi di Pemangkat?
+    - Apa jam kerja kantor Kecamatan Pemangkat?
+
+- intent: lokasi_kantor
+  examples: |
+    - Di mana lokasi kantor Kecamatan Pemangkat?
+    - Alamat kantor kecamatan Pemangkat di mana?
+    - Bagaimana cara menuju kantor Kecamatan Pemangkat?
+
+- intent: bantuan_bot
+  examples: |
+    - Kamu bot atau manusia?
+    - Apakah kamu bisa membantu saya?
+    - Kamu dibuat untuk apa?
+
+- intent: fallback
+  examples: |
+    - Maaf, saya tidak paham.
+    - Bisa diulangi lagi?
+    - Saya tidak mengerti.

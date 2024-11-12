@@ -1,0 +1,6 @@
+version: "3.1"
+stories:
+- story: Fallback ketika pengguna bertanya hal yang tidak dimengerti (.\tests\test_stories.yml)
+  steps:
+  - intent: fallback  # predicted: bantuan_bot: Bisakah kamu membantu saya mencari pekerjaan?
+  - action: utter_fallback

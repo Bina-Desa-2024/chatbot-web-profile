@@ -1,27 +1,42 @@
 version: "3.1"
 
 rules:
-- rule: Say goodbye
+- rule: Ucapkan selamat tinggal
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+    - intent: pamit
+    - action: utter_pamit
 
-- rule: Respond to KK requirements question
+- rule: Jawab syarat KK
   steps:
-  - intent: ask_kk_requirements
-  - action: utter_ask_kk_requirements
+    - intent: syarat_kk
+    - action: utter_syarat_kk
 
-- rule: Respond to KTP requirements question
+- rule: Jawab syarat KTP
   steps:
-  - intent: ask_ktp_requirements
-  - action: utter_ask_ktp_requirements
+    - intent: syarat_ktp
+    - action: utter_syarat_ktp
 
-- rule: Respond to SKCK requirements question
+- rule: Jawab syarat SKCK
   steps:
-  - intent: ask_skck_requirements
-  - action: utter_ask_skck_requirements
+    - intent: syarat_skck
+    - action: utter_syarat_skck
 
-- rule: Respond to bot challenge
+- rule: Jawab jam layanan
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+    - intent: jam_layanan
+    - action: utter_jam_layanan
+
+- rule: Jawab lokasi kantor
+  steps:
+    - intent: lokasi_kantor
+    - action: utter_lokasi_kantor
+
+- rule: Jawab bantuan bot
+  steps:
+    - intent: bantuan_bot
+    - action: utter_bantuan_bot
+
+- rule: Respon fallback
+  steps:
+    - intent: fallback
+    - action: utter_fallback

@@ -1,28 +1,54 @@
 version: "3.1"
 
 stories:
-- story: user asks about KK
+- story: Pengguna bertanya syarat KK
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_kk_requirements
-  - action: utter_ask_kk_requirements
+    - intent: salam
+    - action: utter_salam
+    - intent: syarat_kk
+    - action: utter_syarat_kk
 
-- story: user asks about KTP
+- story: Pengguna bertanya syarat KTP
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_ktp_requirements
-  - action: utter_ask_ktp_requirements
+    - intent: salam
+    - action: utter_salam
+    - intent: syarat_ktp
+    - action: utter_syarat_ktp
 
-- story: user asks about SKCK
+- story: Pengguna bertanya syarat SKCK
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_skck_requirements
-  - action: utter_ask_skck_requirements
+    - intent: salam
+    - action: utter_salam
+    - intent: syarat_skck
+    - action: utter_syarat_skck
 
-- story: user says goodbye
+- story: Pengguna bertanya jam layanan
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+    - intent: salam
+    - action: utter_salam
+    - intent: jam_layanan
+    - action: utter_jam_layanan
+
+- story: Pengguna bertanya lokasi kantor
+  steps:
+    - intent: salam
+    - action: utter_salam
+    - intent: lokasi_kantor
+    - action: utter_lokasi_kantor
+
+- story: Pengguna menyapa bot
+  steps:
+    - intent: salam
+    - action: utter_salam
+    - intent: bantuan_bot
+    - action: utter_bantuan_bot
+
+- story: Pengguna keluar
+  steps:
+    - intent: pamit
+    - action: utter_pamit
+
+- story: Fallback
+  steps:
+    - intent: fallback
+    - action: utter_fallback

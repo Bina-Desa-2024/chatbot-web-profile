@@ -2,68 +2,97 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
 stories:
-- story: greet and ask about KK requirements
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      Apa saja syarat untuk membuat Kartu Keluarga?
-    intent: ask_kk_requirements
-  - action: utter_ask_kk_requirements
-
-- story: greet and ask about KTP requirements
-  steps:
-  - user: |
-      halo
-    intent: greet
-  - action: utter_greet
-  - user: |
-      Apa saja syarat untuk membuat KTP?
-    intent: ask_ktp_requirements
-  - action: utter_ask_ktp_requirements
-
-- story: greet and ask about SKCK requirements
+- story: Pengguna menyapa dan bertanya syarat KK
   steps:
   - user: |
       hai
-    intent: greet
-  - action: utter_greet
+    intent: salam
+  - action: utter_salam
   - user: |
-      Apa saja syarat untuk membuat SKCK?
-    intent: ask_skck_requirements
-  - action: utter_ask_skck_requirements
+      Apa saja syarat untuk membuat Kartu Keluarga di Pemangkat?
+    intent: syarat_kk
+  - action: utter_syarat_kk
 
-- story: greet and say goodbye
+- story: Pengguna menyapa dan bertanya syarat KTP
   steps:
   - user: |
       halo
-    intent: greet
-  - action: utter_greet
+    intent: salam
+  - action: utter_salam
   - user: |
-      sampai jumpa
-    intent: goodbye
-  - action: utter_goodbye
+      Bagaimana cara membuat KTP di Pemangkat?
+    intent: syarat_ktp
+  - action: utter_syarat_ktp
 
-- story: user challenges bot
-  steps:
-  - user: |
-      Apakah kamu bot?
-    intent: bot_challenge
-  - action: utter_iamabot
-
-- story: complete conversation (greet -> KK -> goodbye)
+- story: Pengguna menyapa dan bertanya syarat SKCK
   steps:
   - user: |
       selamat pagi
-    intent: greet
-  - action: utter_greet
+    intent: salam
+  - action: utter_salam
   - user: |
-      Bagaimana cara membuat KK baru?
-    intent: ask_kk_requirements
-  - action: utter_ask_kk_requirements
+      Bagaimana cara membuat SKCK di Kecamatan Pemangkat?
+    intent: syarat_skck
+  - action: utter_syarat_skck
+
+- story: Pengguna menyapa dan bertanya jam layanan
+  steps:
+  - user: |
+      selamat siang
+    intent: salam
+  - action: utter_salam
+  - user: |
+      Jam berapa kantor kecamatan buka?
+    intent: jam_layanan
+  - action: utter_jam_layanan
+
+- story: Pengguna menyapa dan bertanya lokasi kantor
+  steps:
+  - user: |
+      selamat sore
+    intent: salam
+  - action: utter_salam
+  - user: |
+      Di mana lokasi kantor Kecamatan Pemangkat?
+    intent: lokasi_kantor
+  - action: utter_lokasi_kantor
+
+- story: Pengguna menyapa dan keluar
+  steps:
+  - user: |
+      selamat malam
+    intent: salam
+  - action: utter_salam
+  - user: |
+      sampai jumpa
+    intent: pamit
+  - action: utter_pamit
+
+- story: Pengguna menantang bot
+  steps:
+  - user: |
+      Kamu bot atau manusia?
+    intent: bantuan_bot
+  - action: utter_bantuan_bot
+
+- story: Percakapan lengkap (salam -> syarat KK -> pamit)
+  steps:
+  - user: |
+      selamat pagi
+    intent: salam
+  - action: utter_salam
+  - user: |
+      Syarat membuat KK di Kecamatan Pemangkat?
+    intent: syarat_kk
+  - action: utter_syarat_kk
   - user: |
       terima kasih
-    intent: goodbye
-  - action: utter_goodbye
+    intent: pamit
+  - action: utter_pamit
+
+- story: Fallback ketika pengguna bertanya hal yang tidak dimengerti
+  steps:
+  - user: |
+      Bisakah kamu membantu saya mencari pekerjaan?
+    intent: fallback
+  - action: utter_fallback

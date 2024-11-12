@@ -1,32 +1,40 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - ask_kk_requirements
-  - ask_ktp_requirements
-  - ask_skck_requirements
-  - bot_challenge
+  - salam
+  - pamit
+  - syarat_kk
+  - syarat_ktp
+  - syarat_skck
+  - jam_layanan
+  - lokasi_kantor
+  - bantuan_bot
+  - fallback
 
 responses:
-  utter_greet:
-  - text: "Halo! Ada yang bisa saya bantu seputar administrasi desa?"
+  utter_salam:
+    - text: "Halo! Ada yang bisa saya bantu?"
 
-  utter_goodbye:
-  - text: "Terima kasih telah menghubungi kami. Sampai jumpa!"
+  utter_pamit:
+    - text: "Sampai jumpa! Semoga harimu menyenangkan."
 
-  utter_ask_kk_requirements:
-    - text: "Syarat pembuatan Kartu Keluarga: 1. Fotokopi KTP suami istri, 2. Fotokopi buku nikah, 3. Surat keterangan pindah (jika pindah desa), 4. Formulir permohonan KK dari desa."
+  utter_syarat_kk:
+    - text: "Syarat pembuatan KK di Kecamatan Pemangkat meliputi: Surat pengantar RT/RW, Fotokopi KTP dan KK lama (jika ada), serta dokumen pendukung lainnya."
 
-  utter_ask_ktp_requirements:
-    - text: "Syarat pembuatan KTP: 1. Fotokopi KK, 2. Surat keterangan pindah (jika pindah desa), 3. Formulir permohonan KTP dari desa."
+  utter_syarat_ktp:
+    - text: "Untuk membuat KTP baru di Pemangkat, Anda perlu membawa: Fotokopi KK, Akta kelahiran, dan surat pengantar dari RT/RW."
 
-  utter_ask_skck_requirements:
-    - text: "Syarat pembuatan SKCK: 1. Fotokopi KTP, 2. Fotokopi KK, 3. Surat pengantar dari RT/RW, 4. Foto 4x6 (6 lembar), 5. Formulir permohonan SKCK dari desa."
+  utter_syarat_skck:
+    - text: "Persyaratan SKCK meliputi: Fotokopi KTP, Fotokopi KK, Fotokopi Akta Lahir, Pas foto 4x6 sebanyak 4 lembar, dan surat pengantar dari RT/RW."
 
-  utter_iamabot:
-    - text: "Saya adalah bot yang membantu menjawab pertanyaan administrasi desa."
+  utter_jam_layanan:
+    - text: "Kantor Kecamatan Pemangkat buka dari Senin hingga Jumat, pukul 08.00 - 16.00 WITA."
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  utter_lokasi_kantor:
+    - text: "Kantor Kecamatan Pemangkat berlokasi di Jalan Haji Uray Bawadi No.56, Pemangkat Kota, Pemangkat, Pemangkat Kota, Sambas, Kabupaten Sambas, Kalimantan Barat 79453, Indonesia. Nomor telepon kantor adalah (0562) 241008"
+
+  utter_bantuan_bot:
+    - text: "Saya adalah bot yang siap membantu Anda dengan informasi administrasi di Kecamatan Pemangkat."
+
+  utter_fallback:
+    - text: "Maaf, saya tidak mengerti pertanyaan Anda. Bisa diulangi dengan kata-kata lain?"
